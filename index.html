@@ -4,44 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Apa Nak Makan?</title>
-  
-  <!-- ✅ Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-yellow-50 min-h-screen flex flex-col items-center justify-center text-center font-sans p-8">
 
-  <!-- 🔸 Title and tagline -->
+  <!-- 🟠 Title & Tagline -->
   <h1 class="text-4xl font-bold text-orange-600 mb-2">Apa Nak Makan?</h1>
   <p class="text-lg text-gray-700 mb-6">Click the button and let us help you pick your lunch!</p>
 
-  <!-- 🔸 Category Filter Buttons -->
+  <!-- 🟡 Category Filters -->
   <div class="flex flex-wrap justify-center gap-3 mb-6">
-    <button class="category-btn bg-yellow-300 hover:bg-yellow-400 text-black px-4 py-2 rounded-lg" data-category="budget">
-      Budget Friendly
-    </button>
-    <button class="category-btn bg-red-300 hover:bg-red-400 text-black px-4 py-2 rounded-lg" data-category="spicy">
-      Spicy & Hot
-    </button>
-    <button class="category-btn bg-blue-300 hover:bg-blue-400 text-black px-4 py-2 rounded-lg" data-category="western">
-      Western
-    </button>
-    <button class="category-btn bg-green-300 hover:bg-green-400 text-black px-4 py-2 rounded-lg" data-category="vegetarian">
-      Vegetarian
-    </button>
-    <button class="category-btn bg-orange-300 hover:bg-orange-400 text-black px-4 py-2 rounded-lg" data-category="malaysian">
-      Malaysian Food
-    </button>
+    <button class="category-btn bg-yellow-300 hover:bg-yellow-400 text-black px-4 py-2 rounded-lg" data-category="budget">Budget Friendly</button>
+    <button class="category-btn bg-red-300 hover:bg-red-400 text-black px-4 py-2 rounded-lg" data-category="spicy">Spicy & Hot</button>
+    <button class="category-btn bg-blue-300 hover:bg-blue-400 text-black px-4 py-2 rounded-lg" data-category="western">Western</button>
+    <button class="category-btn bg-green-300 hover:bg-green-400 text-black px-4 py-2 rounded-lg" data-category="vegetarian">Vegetarian</button>
+    <button class="category-btn bg-orange-300 hover:bg-orange-400 text-black px-4 py-2 rounded-lg" data-category="malaysian">Malaysian Food</button>
   </div>
 
-  <!-- 🔸 Randomizer Button -->
+  <!-- 🟢 Suggestion Button -->
   <button id="suggest-btn" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl shadow-md mb-6">
     GET A LUNCH SUGGESTION
   </button>
 
-  <!-- 🔸 Suggestion Output -->
-  <div id="suggestion" class="text-2xl font-semibold text-gray-800"></div>
+  <!-- 🔵 Suggested Menu Output -->
+  <div id="suggestion" class="text-2xl font-semibold text-gray-800 mb-4"></div>
 
-  <!-- 🔸 Script -->
+  <!-- 📍 Find Nearby Button (initially hidden) -->
+  <a id="map-link" href="#" target="_blank" class="hidden bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
+    📍 Find Nearby Location
+  </a>
+
+  <!-- JS Logic -->
   <script src="script.js"></script>
 </body>
 </html>

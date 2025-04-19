@@ -37,7 +37,7 @@ categoryButtons.forEach((btn) => {
   });
 });
 
-// Suggest menu and show "Find Nearby" every time
+// Show a random menu and always show the map link
 suggestBtn.onclick = () => {
   let filteredMenus = menus;
 
@@ -50,12 +50,11 @@ suggestBtn.onclick = () => {
   if (randomItem) {
     suggestionEl.innerText = randomItem.name;
 
-    // Always build and show map link
     const query = encodeURIComponent(randomItem.name + " near me");
     mapLink.href = `https://www.google.com/maps/search/${query}`;
-    mapLink.classList.remove("hidden"); // Always show
+    mapLink.classList.remove("hidden");
   } else {
     suggestionEl.innerText = "No suggestion found!";
-    mapLink.classList.add("hidden"); // Hide only when no result
+    mapLink.classList.add("hidden");
   }
 };
