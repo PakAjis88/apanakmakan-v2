@@ -25,9 +25,10 @@ let selectedCategory = null;
 
 const suggestBtn = document.getElementById("suggest-btn");
 const suggestionEl = document.getElementById("suggestion");
-const categoryButtons = document.querySelectorAll(".category-btn");
 const mapLink = document.getElementById("map-link");
+const categoryButtons = document.querySelectorAll(".category-btn");
 
+// Handle category selection
 categoryButtons.forEach((btn) => {
   btn.addEventListener("click", () => {
     categoryButtons.forEach((b) => b.classList.remove("ring-4", "ring-black"));
@@ -36,8 +37,10 @@ categoryButtons.forEach((btn) => {
   });
 });
 
+// Suggest menu and show "Find Nearby" every time
 suggestBtn.onclick = () => {
   let filteredMenus = menus;
+
   if (selectedCategory) {
     filteredMenus = menus.filter(item => item.category === selectedCategory);
   }
@@ -46,11 +49,13 @@ suggestBtn.onclick = () => {
 
   if (randomItem) {
     suggestionEl.innerText = randomItem.name;
+
+    // Always build and show map link
     const query = encodeURIComponent(randomItem.name + " near me");
     mapLink.href = `https://www.google.com/maps/search/${query}`;
-    mapLink.classList.remove("hidden");
+    mapLink.classList.remove("hidden"); // Always show
   } else {
     suggestionEl.innerText = "No suggestion found!";
-    mapLink.classList.add("hidden");
+    mapLink.classList.add("hidden"); // Hide only when no result
   }
 };
