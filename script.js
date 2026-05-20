@@ -145,7 +145,7 @@ function renderGalaxy() {
   orbitFoods.forEach((food, index) => {
     const card = document.createElement("button");
     const angle = (360 / orbitFoods.length) * index;
-    const radius = orbitFoods.length > 4 ? "150px" : "122px";
+    const radius = orbitFoods.length > 4 ? "var(--orbit-radius)" : "var(--orbit-radius-small)";
 
     card.className = "food-orbit-card";
     card.type = "button";
