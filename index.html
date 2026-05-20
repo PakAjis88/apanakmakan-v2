@@ -9,26 +9,15 @@
 <body>
   <main class="page-shell">
     <section class="hero" aria-labelledby="page-title">
-      <div class="hero-copy">
-        <p class="eyebrow">Lunch idea picker</p>
-        <h1 id="page-title">Apa Nak Makan?</h1>
-        <p class="subtitle">Let us help you decide your next lunch.</p>
-      </div>
-
-      <div class="mascot-card" aria-label="Hungry-to-happy mascot placeholder">
-        <div class="mascot-face" aria-hidden="true">
-          <span class="mascot-eye"></span>
-          <span class="mascot-mouth"></span>
-          <span class="mascot-eye"></span>
-        </div>
-        <p>Hungry now. Happy after lunch.</p>
-      </div>
+      <p class="eyebrow">Makan Galaxy</p>
+      <h1 id="page-title">Apa Nak Makan?</h1>
+      <p class="subtitle">Spin the Makan Galaxy and let your lunch destiny choose for you.</p>
     </section>
 
-    <section class="picker-panel" aria-labelledby="picker-title">
+    <section class="galaxy-panel" aria-labelledby="picker-title">
       <div class="section-heading">
-        <p class="eyebrow">Random lunch picker</p>
-        <h2 id="picker-title">Pick a mood, then let lunch happen.</h2>
+        <p class="eyebrow">Choose your craving zone</p>
+        <h2 id="picker-title">Roll through Malaysian favourites.</h2>
       </div>
 
       <div class="category-list" aria-label="Lunch categories">
@@ -41,14 +30,26 @@
         <button class="category-btn" type="button" data-category="rice">Rice Meal</button>
       </div>
 
-      <button id="suggest-btn" class="primary-btn" type="button">Get a Lunch Suggestion</button>
+      <div class="galaxy-layout">
+        <div id="makan-galaxy" class="makan-galaxy" aria-label="Orbiting food choices">
+          <div class="galaxy-core">
+            <span class="core-emoji" aria-hidden="true">🍽️</span>
+            <strong>Makan Galaxy</strong>
+            <span>Lunch destiny loading...</span>
+          </div>
+        </div>
 
-      <article id="result-card" class="result-card" aria-live="polite">
-        <p class="result-label">Today sounds like...</p>
-        <h3 id="suggestion">Tap the button to start.</h3>
-        <p id="suggestion-note">Choose any category or keep it open with All.</p>
-        <a id="map-link" class="map-link is-hidden" href="#" target="_blank" rel="noopener noreferrer">Find Nearby Location</a>
-      </article>
+        <div class="control-stack">
+          <button id="suggest-btn" class="primary-btn" type="button">Roll My Makan</button>
+
+          <article id="result-card" class="result-card" aria-live="polite">
+            <p class="result-label">Today’s Makan Pick</p>
+            <h3 id="suggestion">Ready when your stomach is.</h3>
+            <p id="suggestion-note">Pick a category, roll the galaxy, and see what lunch chooses.</p>
+            <a id="map-link" class="map-link is-hidden" href="#" target="_blank" rel="noopener noreferrer">Find Nearby Location</a>
+          </article>
+        </div>
+      </div>
     </section>
   </main>
 
