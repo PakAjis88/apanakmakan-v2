@@ -4,37 +4,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Apa Nak Makan?</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-yellow-50 min-h-screen flex flex-col items-center justify-center text-center font-sans p-8">
+<body>
+  <main class="page-shell">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Lunch idea picker</p>
+        <h1 id="page-title">Apa Nak Makan?</h1>
+        <p class="subtitle">Let us help you decide your next lunch.</p>
+      </div>
 
-  <!-- 🟠 Title & Tagline -->
-  <h1 class="text-4xl font-bold text-orange-600 mb-2">Apa Nak Makan?</h1>
-  <p class="text-lg text-gray-700 mb-6">Click the button and let us help you pick your lunch!</p>
+      <div class="mascot-card" aria-label="Hungry-to-happy mascot placeholder">
+        <div class="mascot-face" aria-hidden="true">
+          <span class="mascot-eye"></span>
+          <span class="mascot-mouth"></span>
+          <span class="mascot-eye"></span>
+        </div>
+        <p>Hungry now. Happy after lunch.</p>
+      </div>
+    </section>
 
-  <!-- 🟡 Category Filters -->
-  <div class="flex flex-wrap justify-center gap-3 mb-6">
-    <button class="category-btn bg-yellow-300 hover:bg-yellow-400 text-black px-4 py-2 rounded-lg" data-category="budget">Budget Friendly</button>
-    <button class="category-btn bg-red-300 hover:bg-red-400 text-black px-4 py-2 rounded-lg" data-category="spicy">Spicy & Hot</button>
-    <button class="category-btn bg-blue-300 hover:bg-blue-400 text-black px-4 py-2 rounded-lg" data-category="western">Western</button>
-    <button class="category-btn bg-green-300 hover:bg-green-400 text-black px-4 py-2 rounded-lg" data-category="vegetarian">Vegetarian</button>
-    <button class="category-btn bg-orange-300 hover:bg-orange-400 text-black px-4 py-2 rounded-lg" data-category="malaysian">Malaysian Food</button>
-  </div>
+    <section class="picker-panel" aria-labelledby="picker-title">
+      <div class="section-heading">
+        <p class="eyebrow">Random lunch picker</p>
+        <h2 id="picker-title">Pick a mood, then let lunch happen.</h2>
+      </div>
 
-  <!-- 🟢 Suggestion Button -->
-  <button id="suggest-btn" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-xl shadow-md mb-6">
-    GET A LUNCH SUGGESTION
-  </button>
+      <div class="category-list" aria-label="Lunch categories">
+        <button class="category-btn is-active" type="button" data-category="all">All</button>
+        <button class="category-btn" type="button" data-category="budget">Murah &amp; Jimat</button>
+        <button class="category-btn" type="button" data-category="spicy">Pedas Meletup</button>
+        <button class="category-btn" type="button" data-category="local">Local Favourite</button>
+        <button class="category-btn" type="button" data-category="noodles">Noodles</button>
+        <button class="category-btn" type="button" data-category="western">Western</button>
+        <button class="category-btn" type="button" data-category="rice">Rice Meal</button>
+      </div>
 
-  <!-- 🔵 Suggested Menu Output -->
-  <div id="suggestion" class="text-2xl font-semibold text-gray-800 mb-4"></div>
+      <button id="suggest-btn" class="primary-btn" type="button">Get a Lunch Suggestion</button>
 
-  <!-- 📍 Find Nearby Button (initially hidden) -->
-  <a id="map-link" href="#" target="_blank" class="hidden bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">
-    📍 Find Nearby Location
-  </a>
+      <article id="result-card" class="result-card" aria-live="polite">
+        <p class="result-label">Today sounds like...</p>
+        <h3 id="suggestion">Tap the button to start.</h3>
+        <p id="suggestion-note">Choose any category or keep it open with All.</p>
+        <a id="map-link" class="map-link is-hidden" href="#" target="_blank" rel="noopener noreferrer">Find Nearby Location</a>
+      </article>
+    </section>
+  </main>
 
-  <!-- JS Logic -->
   <script src="script.js"></script>
 </body>
 </html>
