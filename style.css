@@ -169,6 +169,8 @@ h1 {
 }
 
 .makan-galaxy {
+  --orbit-radius: 150px;
+  --orbit-radius-small: 122px;
   position: relative;
   min-height: 480px;
   border-radius: 50%;
@@ -412,6 +414,8 @@ h1 {
   }
 
   .makan-galaxy {
+    --orbit-radius: 112px;
+    --orbit-radius-small: 94px;
     min-height: 360px;
   }
 
@@ -442,6 +446,8 @@ h1 {
   }
 
   .makan-galaxy {
+    --orbit-radius: 96px;
+    --orbit-radius-small: 82px;
     min-height: 330px;
   }
 }
